@@ -5,10 +5,7 @@ SIMPL# Pro class to power on devices using [Wake-on-LAN](https://en.wikipedia.or
 
 ## Usage
 ```c#
-using MagicPacket;
-
 WakeOnLAN WOL = new WakeOnLAN();
-
 WOL.WakeUp(mac);
 ```
 
