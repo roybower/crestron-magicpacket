@@ -5,12 +5,11 @@ SIMPL# Pro class to power on devices using [Wake-on-LAN](https://en.wikipedia.or
 
 ## Usage
 ```c#
-using MagicPacket;
-
 WakeOnLAN WOL = new WakeOnLAN();
-
-WOL.WakeUp(mac);
+WOL.WakeUp(mac, broadcast);
 ```
+Instantiate class and pass the mac address & broadcast address to the WakeUp method. 
+
 
 ## Contributing
 Pull requests are welcome. 

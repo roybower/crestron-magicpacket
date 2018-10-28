@@ -11,7 +11,7 @@ namespace MagicPacket
 {
     public class WakeOnLAN
     {
-        public void WakeUp(byte[] mac)
+        public void WakeUp(byte[] mac, string broadcast)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace MagicPacket
 
                 for (int i = 0; i < 3; ++i)
                 {
-                    errCode = WOL.SendData(packet, packet.Length, "192.168.1.255", 9, false);
+                    errCode = WOL.SendData(packet, packet.Length, broadcast, 9, false);
                     if (errCode != SocketErrorCodes.SOCKET_OK)
                         CrestronConsole.PrintLine("UDP SendData() result: {0}", errCode);
                 }
